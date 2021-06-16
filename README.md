@@ -18,27 +18,27 @@ https://cdd.iec.ch/cdd/iec61987/iec61987.nsf/TreeFrameset?OpenFrameSet&ongletact
 ## Setup
 
 ### Splash 
+Docker is mandatory for splash to work
 ```bash
 docker pull scrapinghub/splash
 docker run -p 8050:8050 scrapinghub/splash
 ```
-Splash should now run at http://localhost:8050  
-docker
-git clone
-...
+Splash should now run at http://localhost:8050 
+### Git
+Then you have to install the project locally on your computer
+```bash
+git clone 'http...'
+```
 
 ## Running
-The application is split in three parts. One is a used to run the two other scripts through a CLI. One is used to crawl the specification website and generate a .json file. While the third script is used to read the .json file and genrate the .xml file. 
+The application is split in three parts. One is a used to run the two other scripts through a CLI. One is used to crawl the specification website and generate a .json file. While the third script is used to read the .json file and genrate the .xml file.  
+To run the program you have to be in the root folder of the project  
+```bash
+cd root_folder
+```
 ### Run through CLI-script
+This script is called `main.py`. You start it with the following code in a terminal
 ```bash
-cd clikode
+python main.py
 ```
-
-### Run crawler
-```bash
-cd til_riktig _sted???
-```
-### Run json to xml reader
-```bash
-cd hva_naa_fila_heter
-```
+The script will then start and give you some options....
