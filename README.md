@@ -37,8 +37,17 @@ To run the program you have to be in the root folder of the project
 cd root_folder
 ```
 ### Run through CLI-script
-This script is called `main.py`. You start it with the following code in a terminal
+This script is called `main.py`. The script has three different options; run the crawler, run the json-to-xml script or run both. 
+
+Type in the following code in a terminal to run the crawler:
 ```bash
-python main.py
+python main.py first
 ```
-The script will then start and give you some options....
+Type in the following code in a terminal to run the json-to-xml script:
+```bash
+python main.py second
+```
+Type in the following code in a terminal to run both:
+```bash
+python main.py all
+```
