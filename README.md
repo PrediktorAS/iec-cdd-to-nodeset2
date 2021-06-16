@@ -7,13 +7,38 @@ https://cdd.iec.ch/cdd/iec61987/iec61987.nsf/TreeFrameset?OpenFrameSet&ongletact
 - Docker
 - Python
 - Splash
+### Python libraries
+- minidom
+- json
+- scrapy
+- time
+- scrapy_splash
 
 
 ## Setup
+
+### Splash 
+```bash
+docker pull scrapinghub/splash
+docker run -p 8050:8050 scrapinghub/splash
+```
+Splash should now run at http://localhost:8050  
 docker
 git clone
 ...
 
 ## Running
 The application is split in three parts. One is a used to run the two other scripts through a CLI. One is used to crawl the specification website and generate a .json file. While the third script is used to read the .json file and genrate the .xml file. 
-To run the program ...
+### Run through CLI-script
+```bash
+cd clikode
+```
+
+### Run crawler
+```bash
+cd til_riktig _sted???
+```
+### Run json to xml reader
+```bash
+cd hva_naa_fila_heter
+```
