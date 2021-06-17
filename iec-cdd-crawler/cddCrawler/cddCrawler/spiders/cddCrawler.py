@@ -2,7 +2,7 @@ import scrapy
 import time
 from scrapy_splash import SplashRequest
 
-class cddSpider(scrapy.Spider):
+class CddSpider(scrapy.Spider):
     name = 'cddCrawler'
 
     def start_requests(self):

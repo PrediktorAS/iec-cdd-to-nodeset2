@@ -256,6 +256,8 @@ def main():
     for dictionary in dictionaries:
         build_xml(dictionary)
 
+    print('Finished building xml-files')
+
 
 if __name__ == '__main__':
     main()
