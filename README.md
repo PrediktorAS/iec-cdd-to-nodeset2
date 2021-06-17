@@ -1,8 +1,8 @@
 # IEC Common Data Dictionary to nodeset2.xml
-This is a python-script that crawls the "IEC Common Data Dictionary" specification found here:
+This is a python-script that crawls the "IEC Common Data Dictionary". The IEC Common Data Dictionary specification is found here:
 [IEC Common Data Dictionary](https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/Welcome?OpenPage)
 
-It then generates a nodeset2.xml document containing the relevant information. This file can then be transferred to a ua-server.
+It then generates an [OPC UA](https://opcfoundation.org/about/opc-technologies/opc-ua/) nodeset2.xml document containing the relevant information. This file can then be imported to a UA-server.
 
 
 ## Dependencies
@@ -39,7 +39,7 @@ git clone 'http...'
 ### Change directory
 To install the dependecies and run the program you have to be in the root folder of the project  
 ```bash
-cd root_folder
+cd IEC-CDD-TO-NODESET2
 ```
 
 ### Install dependencies
@@ -56,7 +56,8 @@ python -m pip install -r requirements.txt
 ```
 
 ## Running
-The application is split in three parts. One part of the program will crawl and scrap the website where the IEC dictionaries are located and the second part will use this information to build a nodeset2.xml file. The third part puts the two other parts together so the application can easily be run from the CLI. 
+The application is split in two parts. One part of the program will crawl and scrape the website where the IEC dictionaries are located and the second part will use this information to build a OPC UA nodeset2.xml file. 
+The two parts can easily be run separately or together from the CLI. 
 
 
 ### Run through CLI-script
