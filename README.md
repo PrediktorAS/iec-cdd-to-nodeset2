@@ -42,13 +42,13 @@ This script is called `main.py`. The script has three different options; run the
 
 Type in the following code in a terminal to run the crawler:
 ```bash
-python main.py first
+python main.py crawler
 ```
 Type in the following code in a terminal to run the json-to-xml script:
 ```bash
-python main.py second
+python main.py xml-builder
 ```
 Type in the following code in a terminal to run both:
 ```bash
-python main.py all
+python main.py both
 ```
