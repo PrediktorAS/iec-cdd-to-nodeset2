@@ -1,0 +1,5 @@
+# Requirements
+scrapy >= 2.5.0
+scrapy-splash >= 0.7.2
+
+# To tu use `pip install -r requirements.txt`

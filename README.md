@@ -1,6 +1,8 @@
-# iec-cdd-to-nodeset2
-This is a python-script that crawls the "IEC 61987 - Common Data Dictionary" specification found here:
-https://cdd.iec.ch/cdd/iec61987/iec61987.nsf/TreeFrameset?OpenFrameSet&ongletactif=1. It then generates a nodeset2.xml document containing the relevant information. This file can then be transferred to a ua-server.
+# IEC Common Data Dictionary to nodeset2.xml
+This is a python-script that crawls the "IEC Common Data Dictionary" specification found here:
+[IEC Common Data Dictionary](https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/Welcome?OpenPage)
+
+It then generates a nodeset2.xml document containing the relevant information. This file can then be transferred to a ua-server.
 
 
 ## Dependencies
@@ -31,7 +33,7 @@ git clone 'http...'
 ```
 
 ## Running
-The application is split in three parts. One part of the program will crawl and scrap the website where the IEC dictionaries are located and the second part will use this information to build a nodeset2.xml file. The third part puts the two other parts together so the application can easily be run from the command line. 
+The application is split in three parts. One part of the program will crawl and scrap the website where the IEC dictionaries are located and the second part will use this information to build a nodeset2.xml file. The third part puts the two other parts together so the application can easily be run from the CLI. 
 
 To run the program you have to be in the root folder of the project  
 ```bash
@@ -42,13 +44,13 @@ This script is called `main.py`. The script has three different options; run the
 
 Type in the following code in a terminal to run the crawler:
 ```bash
-python main.py first
+python main.py crawler
 ```
 Type in the following code in a terminal to run the json-to-xml script:
 ```bash
-python main.py second
+python main.py xml-builder
 ```
 Type in the following code in a terminal to run both:
 ```bash
-python main.py all
+python main.py both
 ```
