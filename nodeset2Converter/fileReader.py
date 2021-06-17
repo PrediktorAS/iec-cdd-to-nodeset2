@@ -29,7 +29,10 @@ def create_tree():
 
 #This function is the main function for building and creating the xml file
 def build_xml(folder_name):
+    #Gets the first number in the folder name. This number is equal to the dictionary code
     dictionary_code = re.findall(r'\d+', folder_name)[0]
+    #Some dictionaries have two numbers to identify the dictionary
+    #This code gets both numbers, if the dictionary has two of them
     whole_dictionary_code = re.findall(r'\d+', folder_name)[0] + ('-' + re.findall(r'\d+', folder_name)[1] if len(re.findall(r'\d+', folder_name)) == 2 else '')
     #Creates the xml and UANodeSet tag
     root = minidom.Document()  
@@ -134,6 +137,7 @@ def build_xml_dictionary_folder(root, ua_node_set, folder_name):
 #Builds every UAObject from the node information
 def build_xml_ua_objects(root, ua_node_set, folder_name, dictionary_code):
     for node in node_list:
+        #Checks if the node belongs to the dictionary
         if node.dictionary_code == dictionary_code:
             ua_object = root.createElement('UAObject')
             #If the node do not have a parent, the dictionary folder will be set to its parent
@@ -174,6 +178,7 @@ def build_xml_ua_variables(root, ua_node_set, dictionary_code):
     #Creates a list with the different variable types
     #The method will add one property for each variable type to each node
     for node in node_list:
+        #Checks if the node belongs to the dictionary
         if node.dictionary_code == dictionary_code:
             variable_types = [
                 'Version',
@@ -244,8 +249,10 @@ def print_xml(root, dictionary_code):
 def main():
     read_json()
     create_tree()
+    #A list with all the folder names
     dictionaries = ['Electric/electronic components (IEC 61360-4)', 'Process automation (IEC 61987 series)', 'Low voltage switchgear (IEC 62683 series)']
 
+    #Creates a xml-file for each folder
     for dictionary in dictionaries:
         build_xml(dictionary)
 
