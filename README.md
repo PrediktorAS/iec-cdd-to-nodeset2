@@ -33,7 +33,7 @@ Splash should now run at http://localhost:8050
 ### Git
 Then you have to install the project locally on your computer
 ```bash
-git clone 'http...'
+git clone 'https://github.com/PrediktorAS/iec-cdd-to-nodeset2.git'
 ```
 
 ### Change directory
