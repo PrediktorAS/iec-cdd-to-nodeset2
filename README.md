@@ -31,7 +31,8 @@ git clone 'http...'
 ```
 
 ## Running
-The application is split in three parts. One is a used to run the two other scripts through a CLI. One is used to crawl the specification website and generate a .json file. While the third script is used to read the .json file and genrate the .xml file.  
+The application is split in three parts. One part of the program will crawl and scrap the website where the IEC dictionaries are located and the second part will use this information to build a nodeset2.xml file. The third part puts the two other parts together so the application can easily be run from the command line. 
+
 To run the program you have to be in the root folder of the project  
 ```bash
 cd root_folder
